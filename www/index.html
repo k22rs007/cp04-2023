@@ -150,9 +150,9 @@
 
 
     // 変数宣言
-    var active= false;
-    var startTime = 0;
-    var period = 0;
+   var active = false;
+   var startTime = 0;
+   var period = 0;
 
 
     
@@ -182,15 +182,14 @@
     
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
-      actve=true;
-      startTime =new Date();
+      
         
         
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
-      active = false;
+      
         
         
     }
@@ -198,22 +197,14 @@
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
         alarm();
-        active = false;
-        period = 60* parseInt($("#minute").val())+parseInt($("#second").val());
-        $("#time").html("経過時間:0");
-        $("#remain").html("残り時間;"+period);
+        
         
     }
     
  
     // 繰り返し実行する処理
     function timer(){  
-      if(active){
-        var time = parseInt((new Data() - startTime)/1000);
-        var rest = period -time;
-        $("#time").html("経過時間:0");
-        $("#remain").html("残り時間;"+rest);
-        analog(rest);
+      
         
         
     } 
